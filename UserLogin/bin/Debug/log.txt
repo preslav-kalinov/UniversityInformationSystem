@@ -1,0 +1,29 @@
+25.2.2022 г. 2:40:36;;ADMIN;Login successful.
+25.2.2022 г. 2:40:48;;ADMIN;Changing role on Marin
+25.2.2022 г. 12:43:27[INFO] ;STUDENT;Login successful.
+25.2.2022 г. 12:43:53[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:45:30[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:45:53[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:46:13[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:46:56[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:47:24[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:47:55[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:50:28[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 12:59:36[INFO] ;ADMIN;Login successful.
+25.2.2022 г. 13:10:00[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 0:50:02[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 0:53:52[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:01:26[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:06:51[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:26:50[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:25:55[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:28:58[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:30:00[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:30:28[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:30:58[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:31:17[INFO] ;ADMIN;Changing role on Marin
+6.3.2022 г. 1:44:43[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 1:45:43[INFO] ;ADMIN;Changing role on Marin
+6.3.2022 г. 2:03:32[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 2:29:40[INFO] ;ADMIN;Login successful.
+6.3.2022 г. 2:42:34[INFO] ;ADMIN;Login successful.

@@ -17,7 +17,14 @@
         <Label x:Name="lblName3" Content="Име:" HorizontalAlignment="Left" Margin="23,155,0,0" VerticalAlignment="Top" Width="42" FontSize="15"/>
         <TextBox x:Name="txtName3" HorizontalAlignment="Left" Height="30" Margin="76,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Background="Bisque" TextWrapping="Wrap" Text="Hello, XAML!" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="ArialBlack" FontWeight="Bold" FontSize="17"> I edit XAML myself! </TextBlock>
-        <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="100" Click="Button_Click"> Click me! </Button>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="ArialBlack" FontWeight="Bold" FontSize="17"> I edit XAML myself!</TextBlock>
+        <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="100" Click="Button_Click">Click me!</Button>
+        <ListBox x:Name="peopleListBox" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="160" Margin="516,81,0,0" IsSynchronizedWithCurrentItem="False">
+            <ListBoxItem Content="Mike"/>
+            <ListBoxItem Content="Lisa"/>
+            <ListBoxItem Content="John"/>
+            <ListBoxItem Content="Mary"/>
+        </ListBox>
+        <Button x:Name="greetingBtn" Content="Greeting" HorizontalAlignment="Left" Margin="507,197,0,0" VerticalAlignment="Top" Width="99" Height="32" Click="greetingBtn_Click"/>
     </Grid>
 </Window>

@@ -13,3 +13,5 @@ C:\Users\OMEN\Desktop\StudentSystemProgram\WPFhello\obj\Debug\WPFhello.csproj.Ge
 C:\Users\OMEN\Desktop\StudentSystemProgram\WPFhello\obj\Debug\WPFhello.csproj.CoreCompileInputs.cache
 C:\Users\OMEN\Desktop\StudentSystemProgram\WPFhello\obj\Debug\WPFhello.exe
 C:\Users\OMEN\Desktop\StudentSystemProgram\WPFhello\obj\Debug\WPFhello.pdb
+C:\Users\OMEN\Desktop\StudentSystemProgram\WPFhello\obj\Debug\MyMessage.g.cs
+C:\Users\OMEN\Desktop\StudentSystemProgram\WPFhello\obj\Debug\MyMessage.baml

@@ -7,6 +7,41 @@
         mc:Ignorable="d"
         Title="ExpenseIt - View Expense" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="{Binding Name}" Grid.Row="1" FontFamily="Arial Black" FontSize="18" HorizontalAlignment="Center" />
+            <Label Content="{Binding Department}" FontFamily="Arial Black" FontSize="18" Grid.Row="2" HorizontalAlignment="Center"/>
+            <Label Grid.Row="0" Content="Expense Report For:" FontFamily="Arial Black" FontSize="24" Foreground="#FF212C90" Background="Transparent"></Label>
+            <Label Grid.Row="1" Content="Name:" FontFamily="Arial Black" FontSize="18"></Label>
+            <Label Grid.Row="2" Content="Department:" FontFamily="Arial Black" FontSize="18"></Label>
+            <Label Grid.Column="0" Grid.Row="3" Content="{Binding Path=LastChecked}"></Label>
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Height="35" Padding="5" Background="#4E87D4">
+                    <DataGrid Grid.Column="1" Grid.Row="0" ItemsSource="{Binding Path=Expenses}" AutoGenerateColumns="False" RowHeaderWidth="0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ExpenseType"
+                                                Binding="{Binding Path=ExpenseType}" />
+                            <DataGridTextColumn Header="Amount" Binding="{Binding Path=ExpenseAmount}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

@@ -11,20 +11,36 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Expenselt
 {
     /// <summary>
     /// Interaction logic for ExpenseltHome.xaml
     /// </summary>
-    public partial class ExpenseltHome : Window
+    public partial class ExpenseltHome : Window, INotifyPropertyChanged
     {
         public List<Person> ExpenseDataSource { get; set; }
         public string MainCaptionText { get; set; }
-        public DateTime LastChecked { get; set; }
+        private DateTime lastCheked;
+        public event PropertyChangedEventHandler? PropertyChanged;
+        public DateTime LastChecked 
+        { 
+            get { return lastCheked; }
+            set
+            {
+                lastCheked = value;
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs("LastChecked"));
+            }
+        }
+        public ObservableCollection<string> PersonsChecked
+        { get; set; }
         public ExpenseltHome()
         {
             InitializeComponent();
+            PersonsChecked = new ObservableCollection<string>();
             ExpenseDataSource = new List<Person>()
             {
                 new Person()
@@ -33,7 +49,7 @@ namespace Expenselt
                     Department ="Legal",
                     Expenses = new List<Expense>()
                     {
-                        new Expense() { ExpenseType="Lunch", ExpenseAmount =50 },
+                        new Expense() { ExpenseType="Lunch", ExpenseAmount=50 },
                         new Expense() { ExpenseType="Transportation", ExpenseAmount=50 }
                     }
                 },
@@ -105,9 +121,9 @@ namespace Expenselt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("ExpenseIt", "Open report?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("ExpenseIt", "Do you want to open report?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                ExpenseReport expenseReport = new ExpenseReport(peopleListBox.SelectedItem);
+                ExpenseReport expenseReport = new ExpenseReport();
                 expenseReport.Width = Width;
                 expenseReport.Height = Height;
                 expenseReport.Show();
@@ -117,6 +133,13 @@ namespace Expenselt
             {
                 this.Show();
             }
+        }
+
+        private void peopleListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            PersonsChecked.Add((peopleListBox.SelectedItem as System.Xml.XmlElement).Attributes["Name"].Value);
+            //PersonsChecked.Add(peopleListBox.SelectedItem.ToString());
+            LastChecked = DateTime.Now;
         }
     }
 }

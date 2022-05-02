@@ -17,3 +17,5 @@ C:\Users\OMEN\Desktop\StudentSystemProgram\StudentInfoSystem\obj\Debug\StudentIn
 C:\Users\OMEN\Desktop\StudentSystemProgram\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.CopyComplete
 C:\Users\OMEN\Desktop\StudentSystemProgram\StudentInfoSystem\obj\Debug\StudentInfoSystem.exe
 C:\Users\OMEN\Desktop\StudentSystemProgram\StudentInfoSystem\obj\Debug\StudentInfoSystem.pdb
+C:\Users\OMEN\Desktop\StudentSystemProgram\StudentInfoSystem\obj\Debug\LoginWindow.g.cs
+C:\Users\OMEN\Desktop\StudentSystemProgram\StudentInfoSystem\obj\Debug\LoginWindow.baml

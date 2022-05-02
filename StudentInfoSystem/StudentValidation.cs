@@ -9,7 +9,7 @@ namespace StudentInfoSystem
 {
     class StudentValidation
     {
-        public Student GetStudentDataByUser(User user)
+       /* public Student GetStudentDataByUser(User user)
         {
             Student student = new Student();
             if (user.facNum == null)
@@ -24,7 +24,7 @@ namespace StudentInfoSystem
             }
 
             return student;
-        }
+        }*/
     }
 }
 

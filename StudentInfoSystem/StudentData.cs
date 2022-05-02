@@ -30,17 +30,10 @@ namespace StudentInfoSystem
 
         private static Student AddStudent()
         {
-            Student student = new Student();
-            student.name = "Ivan";
-            student.surname = "Todorov";
-            student.lastName = "Georgiev";
-            student.specialty = "Software Engeneering";
-            student.educationLevel = "Bachelor";
-            student.status = "Assured";
-            student.facNumber = "501219025";
-            student.course = 3;
-            student.stream = 9;
-            student.group = 36;
+            Student student = new Student("Ivan", "Todorov", "Georgiev", "FCST", "Software Engeneering",
+               "Bachelor", "Assured", "501219025", 3, 9, 36);
+            student.username = "iv4o00";
+            student.password = "Abcd1234";
 
             return student;
         }

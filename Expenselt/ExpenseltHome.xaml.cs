@@ -41,6 +41,8 @@ namespace Expenselt
         {
             InitializeComponent();
             PersonsChecked = new ObservableCollection<string>();
+            MainCaptionText = "View Expense Report :";
+            LastChecked = DateTime.Now;
             ExpenseDataSource = new List<Person>()
             {
                 new Person()
@@ -115,15 +117,13 @@ namespace Expenselt
                     }
                 }
             };
-            MainCaptionText = "View Expense Report :";
-            LastChecked = DateTime.Now;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("ExpenseIt", "Do you want to open report?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                ExpenseReport expenseReport = new ExpenseReport();
+                ExpenseReport expenseReport = new ExpenseReport(peopleListBox.SelectedItem);
                 expenseReport.Width = Width;
                 expenseReport.Height = Height;
                 expenseReport.Show();

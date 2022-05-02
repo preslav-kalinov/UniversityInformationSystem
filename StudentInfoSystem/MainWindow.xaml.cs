@@ -56,11 +56,17 @@ namespace StudentInfoSystem
 
         private void ClearText()
         {
-            foreach (Control box in StudentGrid.Children)
-            {
-                if (box.GetType() == typeof(TextBox))
-                    ((TextBox)box).Text = String.Empty;
-            }
+            txtBoxName.Text = String.Empty;
+            txtBoxSurName.Text = String.Empty;
+            txtBoxFamilyName.Text = String.Empty;
+            txtBoxFaculty.Text = String.Empty;
+            txtBoxSpecialty.Text = String.Empty;
+            txtBoxStatus.Text = String.Empty;
+            txtBoxFNum.Text = String.Empty;
+            txtBoxEduLevel.Text = String.Empty;
+            txtBoxCourse.Text = String.Empty;
+            txtBoxStream.Text = String.Empty;
+            txtBoxGroup.Text = String.Empty;
         }
 
         private void showInfo(Student student)
@@ -68,6 +74,7 @@ namespace StudentInfoSystem
             txtBoxName.Text = student.name;
             txtBoxSurName.Text = student.surname;
             txtBoxFamilyName.Text = student.lastName;
+            txtBoxFaculty.Text = student.faculty;
             txtBoxSpecialty.Text = student.specialty;
             txtBoxStatus.Text = student.status;
             txtBoxFNum.Text = student.facNumber;

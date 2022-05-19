@@ -21,6 +21,7 @@ namespace StudentInfoSystem
         public int group { get; set; }
         public String username { get; set; }
         public String password { get; set; }
+        public int StudentId { get; set; }
 
         public Student(String name, String surname,
             String lastName, String faculty, String specialty, String educationLevel,

@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace StudentInfoSystem
 {
@@ -20,9 +23,17 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<string> StudStatusChoices { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            FillStudStatusChoices();
+            DataContext = this;
+
+            if (TestStudentsIfEmpty())
+            {
+                CopyTestStudents();
+            }
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
@@ -82,6 +93,60 @@ namespace StudentInfoSystem
             txtBoxCourse.Text = student.course.ToString();
             txtBoxStream.Text = student.stream.ToString();
             txtBoxGroup.Text = student.group.ToString();
+        }
+
+        private void FillStudStatusChoices()
+        {
+            StudStatusChoices = new List<string>();
+            using (IDbConnection connection = new
+            SqlConnection(Properties.Settings.Default.DbConnect))
+            {
+                string sqlquery =
+                @"SELECT StatusDescr
+                FROM StudStatus";
+                IDbCommand command = new SqlCommand();
+                command.Connection = connection;
+                 connection.Open();
+                command.CommandText = sqlquery;
+                IDataReader reader = command.ExecuteReader();
+                bool notEndOfResult;
+                notEndOfResult = reader.Read();
+                while (notEndOfResult)
+
+                {
+                    string s = reader.GetString(0);
+                    StudStatusChoices.Add(s);
+                    notEndOfResult = reader.Read();
+                }
+            }
+        }
+
+        public bool TestStudentsIfEmpty()
+        {
+            StudentInfoContext context = new StudentInfoContext();
+            IEnumerable<Student> queryStudents = context.Students;
+            int count = queryStudents.Count();
+
+            if (count > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void CopyTestStudents()
+        {
+            StudentInfoContext context = new StudentInfoContext();
+
+            foreach (Student st in StudentData.TestStudents)
+            {
+                context.Students.Add(st);
+            }
+
+            context.SaveChanges();
         }
     }
 }

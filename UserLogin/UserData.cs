@@ -65,6 +65,7 @@ namespace UserLogin
 
         public static User IsUserPassCorrect(string username, string password)
         {
+            UserContext context = new UserContext();
             User searchUsers = (from user in TestUsers
                                 where username.Equals(user.username)
                                 && password.Equals(user.password)
@@ -91,14 +92,18 @@ namespace UserLogin
 
         public static void AssignUserRole(string username, UserRoles role)
         {
-            foreach (User user in TestUsers)
             {
-                if (username.Equals(user.username))
+                UserContext context = new UserContext();
+                foreach (User user in TestUsers)
                 {
-                    Logger.LogActivity("Changing role on " + username);
-                    user.role = (int)role;
-                    break;
+                    if (user.username.Equals(user))
+                    {
+                        user.role = Convert.ToInt32(role);
+                        Logger.LogActivity("Changing role on " + username);
+                        break;
+                    }
                 }
+                context.SaveChanges();
             }
         }
 

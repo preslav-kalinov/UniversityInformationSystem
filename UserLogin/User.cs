@@ -8,12 +8,34 @@ namespace UserLogin
 {
     public class User
     {
-        public String username { get; set; }
-        public String password { get; set; }
-        public String facNum { get; set; }
-        public int role { get; set; }
-
-        public DateTime Created;
-
+        public System.String username
+        {
+            get;
+            set;
+        }
+        public System.String password
+        {
+            get;
+            set;
+        }
+        public System.String facNum
+        {
+            get;
+            set;
+        }
+        public System.Int32 role
+        {
+            get; set;
+        }
+        public System.DateTime Created
+        {
+            get;
+            set;
+        }
+        public System.DateTime ActiveTo
+        {
+            get; set;
+        }
+        public System.Int32 UserId { get; set; }
     }
 }

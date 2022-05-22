@@ -30,10 +30,10 @@ namespace StudentInfoSystem
             FillStudStatusChoices();
             DataContext = this;
 
-            if (TestStudentsIfEmpty())
+            /*if (TestStudentsIfEmpty())
             {
                 CopyTestStudents();
-            }
+            }*/
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)

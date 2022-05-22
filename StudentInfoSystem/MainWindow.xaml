@@ -40,6 +40,6 @@
         <Button x:Name="enableButton" Grid.Column="1" Content="Enable Interface" HorizontalAlignment="Left" Height="25" Margin="10,312,0,0" VerticalAlignment="Top" Width="424" Click="enableButton_Click"/>
         <GroupBox x:Name="GroupBox1" Header="Лични данни&#xD;&#xA;" HorizontalAlignment="Left" Height="175" Margin="10,10,0,0" VerticalAlignment="Top" Width="376"/>
         <GroupBox x:Name="GroupBox2" Header="Студентска информация&#xD;&#xA;" HorizontalAlignment="Left" Height="249" Margin="10,190,0,0" VerticalAlignment="Top" Width="376" RenderTransformOrigin="0.497,0.528"/>
-        <ListBox x:Name="listStatus" ItemsSource="{Binding StudStatusChoices}" Margin="79,175,145,254" Width="220" Height="40" Grid.Column="1"/>
+        <ListBox x:Name="listStatus" ItemsSource="{Binding StudStatusChoices}" Margin="130,352,62.667,83.667"/>
     </Grid>
 </Window>
